@@ -27,9 +27,9 @@ public class ArrayEx7 {
             if (i == rIdx) {
                 continue;
             }
-            int tmp = arr[i];
-            arr[i] = arr[rIdx];
-            arr[rIdx] = tmp;
+            int tmp = arr[i];//0~9까지 임의의 공간에 넣어 두기(0번째 자리가 빔)
+            arr[i] = arr[rIdx];//랜덤의 값을 0번째 자리에 넣기
+            arr[rIdx] = tmp;//빈칸에 있던 0을 랜덤자리에 채우기
         }
         System.out.println(Arrays.toString(arr));
     }
