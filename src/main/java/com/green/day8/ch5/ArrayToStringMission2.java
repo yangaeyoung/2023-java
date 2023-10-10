@@ -30,7 +30,7 @@ public class ArrayToStringMission2 {
 
 
         System.out.println("------2-----");
-        System.out.printf("[%d", arr[0]);
+        System.out.printf("[%d", arr[0]);//0번 방에는 체크 하지 않는 것으로
         for(int i=1; i< arr.length; i++){
             System.out.printf(", %d",arr[i]);
         }
