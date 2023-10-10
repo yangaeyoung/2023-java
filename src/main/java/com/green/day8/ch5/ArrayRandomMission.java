@@ -16,14 +16,16 @@ public class ArrayRandomMission {
 
         for (int i=0; i<arr.length; i++) {
             arr[i] = (int) (Math.random() * 5) + 1;
+            System.out.println(arr[i]);//중복제거되고 랜덤으로 나오는 과정 보기
 
             for (int z=0; z<i; z++) {
-                if (arr[i] == arr[z]) {//[] 자리값, break걸리면 맨 위 for문의 i++로 가서 이전 자리값부터 다시 재설정
+                if (arr[i] == arr[z]) {
                     i--;
+                    //[] 자리값, 중복이 발견되면 i--으로 맨 위 for문의 i++로 가서 이전 자리값부터 다시 재설정
                     break;
                 }
             }
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));//for문을 다 빠져나오기
     }
 }

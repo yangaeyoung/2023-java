@@ -13,19 +13,21 @@ public class ArrayEx2 {
         각 방의 1~10의 랜덤한 값을 넣어주세요.
         중복 허용
          */
+        final int LEN= 5;
+        int[] arr1 = new int[LEN];
 
-        int[] arr1 = new int[5];
-
-        for(int i=0; i<arr1.length; i++) {
-            int random = (int) (Math.random() * 10) + 1;
-            arr1[i] = random;
+        for(int i=0; i<arr1.length; i++) {//입력
+            arr1[i] = (int) (Math.random() * 10) + 1;
+            //실행할 때마다 랜덤한 값을 넣어야 하기 때문에 for문 안에 넣어야 함
+//            arr1[i] = random; //현재 FOR문에서는 랜덤으로 0~4번까지의 자릿수를 입력
         }
 
-        for(int z=0; z<arr1.length; z++) {
-            System.out.println(arr1[z]);
+        for(int i=0; i<arr1.length; i++) {//출력
+            System.out.printf("arr[%d]: %d\n", i, arr1[i]);
+
         }
 
-        System.out.println(arr1);
+        System.out.println(arr1);//주소값을 찍을 수 없기 때문에 문자열로 출력됨
         System.out.println(arr1.toString());
         System.out.println(Arrays.toString(arr1));
 

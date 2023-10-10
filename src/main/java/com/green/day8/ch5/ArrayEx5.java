@@ -11,6 +11,7 @@ public class ArrayEx5 {
         for(int i=0; i< score.length; i++){
             sum += score[i];
             avg = (double)sum / score.length;
+            //float avg = (float)sum / score.length;
             }
         System.out.println("총점: " + sum);
         System.out.println("평균: " + avg);// printf("평점: %f\n", (double)sum /score.length);
