@@ -2,7 +2,7 @@ package com.green.day10.ch6;
 
 public class TvTest {
     public static void main(String[] args) {
-        //( ↓ ) = tv객체의 변수를 담을 수 있는 변수
+        //( ↓ ) = Tv객체의 주소값만 담을 수 있는 변수
         Tv tv1 = new Tv();//대문자는 변수가 선언할 때 담을 수 있는 //new는 Tv(클레스명)를 객체화
         tv1.channel = 10;//주소값 "." = 객체한테 접근
         tv1.power = true;

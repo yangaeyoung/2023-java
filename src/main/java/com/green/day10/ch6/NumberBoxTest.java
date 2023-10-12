@@ -6,7 +6,7 @@ public class NumberBoxTest {//호출
 //        nb1 = new NumberBox();//변수 선언
         NumberBox nb1 = new NumberBox();//객체 생성
 
-        nb1.sum(10,20); //10,20 입력하는 이름 = 아규먼트
+        nb1.sum(10,20); //10,20 입력하는 이름 = 아규먼트 void
         nb1.sum(30,40);
 
         nb1.minus(40,20);//40-20=20
