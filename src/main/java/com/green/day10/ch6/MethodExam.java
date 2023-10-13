@@ -14,7 +14,7 @@ public class MethodExam {
         System.out.println("0이 아닙니다.");
     }
 
-    int randomValFromTo(int n, int n1) {
+    public int randomValFromTo(int n, int n1) {
         return (int) (Math.random() * (n1 - n + 1)) + n;
     }
 
