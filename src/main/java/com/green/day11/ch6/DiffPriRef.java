@@ -17,7 +17,7 @@ public class DiffPriRef {
         num = 10;
     }
 
-    public static void changeVal(NumBox nb2) {
+    public static void changeVal(NumBox nb2) {//주소값을 복사해오기 때문에 nb.num과 nb2.num과 같은 것과 같다
         System.out.println("changeVal - NumBox");
         nb2.num = 10;//기존값은 지워지고 10이 들어가게 됨
         System.out.println("nb2 : " + nb2.num);

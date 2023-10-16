@@ -6,7 +6,7 @@ public class ReferenceParamEx3 {
 
     public static void main(String[] args) {
         int[] arr = {3, 2, 1, 6, 5, 4};
-        printArr(arr);//3, 2, 1, 6, 5, 4]
+        printArr(arr);//[3, 2, 1, 6, 5, 4]
         System.out.println(Arrays.toString(arr));
         sortArr(arr);//같은 공간에 안에서 작성
 
