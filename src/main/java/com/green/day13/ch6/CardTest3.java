@@ -47,9 +47,10 @@ public class CardTest3 {
         int cnt = 0;
         for (int i = 0; i < pattern.length; i++) {
             for (int z = 1; z <= 13; z++) {
-                String num1 = getdenomination(z);
                 Card s = new Card();
+                String num1 = getdenomination(z);
                 s.pattern = pattern[i];
+
                 s.denomination = num1;
                 cards2[cnt++] = s; //cards2[0~51] = s; 배열 복사할 때와 똑같음
             }
