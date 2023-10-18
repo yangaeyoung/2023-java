@@ -12,7 +12,7 @@ public class CardDeck {
     }
 
     public Card getCard() {
-        Card c = null;
+        Card c = null;//return c를 위해서 위에서 선언해줌
         while (true) {
             int rIdx = (int) (Math.random() * cards.length);
             c = cards[rIdx];//랜덤 5가 나왔다, 다시 5가 나왔을때는 c가 null

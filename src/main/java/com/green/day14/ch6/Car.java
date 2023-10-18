@@ -11,7 +11,7 @@ public class Car {
         this("white");
     }
 
-    public Car(String color) {
+    public Car(String color) {//파라미터가 있는 생성자, 오버로딩된 생성자
         this(color,"auto",4);
     }
 
@@ -30,7 +30,7 @@ public class Car {
 class CarTest {
     public static void main(String[] args) {
         Car car1 = new Car();
-        Car car2 = new Car("blue");
+        Car car2 = new Car("blue");//Car("blue") 생성자 호출
 
         car1.printMySelf(); //color=white, gearType=auto, door=4
         car2.printMySelf(); //color=blue, gearType=auto, door=4
