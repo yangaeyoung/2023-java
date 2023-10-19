@@ -15,7 +15,7 @@ public class MyMath2 {
         System.out.println(num < 0 ? -num : num);
     }
 
-    static void staticAbs(int n){
+    public  static void staticAbs(int n){
         System.out.println(n < 0 ? -n : n);
     }
 

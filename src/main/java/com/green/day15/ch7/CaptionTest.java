@@ -1,11 +1,10 @@
 package com.green.day15.ch7;
 
 class Tv{
-    boolean power;
+    boolean power;//속성, 메소드, 멤버필드, 전역변수
     int channel;
 
-
-    void power() { power = !power; }
+    void power() { power = !power; }//토글
     void ChannelUp() { channel++; }
     void channelDown() { channel--; }
 
@@ -19,7 +18,7 @@ class CaptionTv extends Tv{
         }
     }
 
-    @Override //부모클래스를 새로 정의해서 씀
+    @Override //부모클래스를 새로 정의해서 씀, 애노테이션annotation
     void ChannelUp(){
         channel += 2;
     }

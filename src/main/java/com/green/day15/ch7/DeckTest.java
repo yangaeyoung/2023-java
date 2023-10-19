@@ -30,7 +30,7 @@ class Card {
     }
 
     @Override
-    public String toString() {
+    public String toString() {//오브젝트로 toString
 //        return "kind: " + kind + " number: " + number;
         return String.format("kind: %d, number: %d", kind, number);
     }
@@ -40,6 +40,20 @@ class Card {
 class Deck {
     final int CARD_NUM = 52;
     Card[] cardArr = new Card[CARD_NUM];
+
+    void shuffle() {
+        for (int i = 0; i < CARD_NUM; i++) {
+            int r = (int) (Math.random() * CARD_NUM);
+            Card tmp = cardArr[i];//Card tmp = pick(i); 같음
+            cardArr[i] = cardArr[r];
+            cardArr[r] = tmp;
+        }
+//        for (Card a : cardArr) {
+//            System.out.printf("kind: %d, number: %d\n", a.kind, a.number);
+//            System.out.println(a);
+//        }
+    }
+
 
     Deck() {
         int cnt = 0;
@@ -60,26 +74,29 @@ class Deck {
         }
     }
 
-        Card pick (int n){
-            return cardArr[n];//카드 인덱스 안에 있는 n번째 카드 하나 뽑기
-            }
+    Card pick(int n) {
+        return cardArr[n];//카드 인덱스 안에 있는 n번째 카드 하나 뽑기
+    }
 
-    Card pick(){
-        return cardArr[(int)(Math.random() * CARD_NUM) ];
-    }//0<(Math.random() * CARD_NUM )<52
-        }
-
+    Card pick() {
+        return cardArr[(int) (Math.random() * CARD_NUM)];
+    }//0<(Math.random() * CARD_NUM )<52 배열
+}
 
 
 public class DeckTest {
     public static void main(String[] args) {
+        Deck deck = new Deck();
+        deck.shuffle();
+
+
 //        System.out.println(Card.KIND_MAX);//클레스 멤버필드
 
-        Deck deck = new Deck();
-        Card c1 = deck.pick(0);
-        System.out.println("pick: " + c1);
-        Card c2 = deck.pick();
-        System.out.println("random: " + c2);
+//        Deck deck = new Deck();
+//        Card c1 = deck.pick(0);
+//        System.out.println("pick: " + c1);
+//        Card c2 = deck.pick();
+//        System.out.println("random: " + c2);
 
 //        Card c = new Card(4, 2);
 //        Card c2 = new Card(1, 10);
