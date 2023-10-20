@@ -15,7 +15,7 @@ public class Singleton {
 
 class SingletonTest{
     public static void main(String[] args) {
-        Singleton s1 = Singleton.getInstance();
+        Singleton s1 = Singleton.getInstance();//대문자 S로 static메소드
         Singleton s2 = Singleton.getInstance();
         System.out.println(s1 == s2);//ture 객체를 마치 static처럼 하나만 만들어서 주소값이 같음
 

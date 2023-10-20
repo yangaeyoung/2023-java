@@ -90,9 +90,7 @@ class AnimalTest2{
 
 class Dog extends Animal{
     @Override
-    public void crying(){
-        System.out.println("멍! 멍!");
-    }
+    public void crying(){ System.out.println("멍! 멍!"); }
 }
 
 class Bulldog extends Dog{
