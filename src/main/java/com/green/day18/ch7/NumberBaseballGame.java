@@ -48,7 +48,7 @@ class NumberBaseball {
                 }
             }
         }
-
+        out = GAME_COUNT - (strike + ball);
         return true;
     }
 
