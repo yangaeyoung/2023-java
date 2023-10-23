@@ -36,8 +36,6 @@ class PolyArgumentTest2 {
         //buyer의 money가 부족하면 "잔액부족" money값 마이너스 처리 x
         //잔액이 부족하지 않으면 Tv을/를 구입하셨습니다.
         //>money 마이너스 처리, bonusPoint 플러스 처리
-
-
     }
 }
 
@@ -46,11 +44,11 @@ class Buyer {
     private int bonusPoint;
 
     Buyer() {
-        money = 1050;//파라미터 값이 없기 때문에 앞에 this 생략 가능
+        money = 1050;//Buyer()에 파라미터 값이 없기 때문에 앞에 this 생략 가능
         bonusPoint = 0;// 0일 경우 주석 처리 가능
     }
 
-    public void buy(Product product) {
+    public void buy(Product product) {//Product에 있는 getter setter 호출 가능
         System.out.printf("제품명: %s", product);
         System.out.printf(" price : %d", product.getPrice());
         System.out.printf(" bonusPoint : %d\n", product.getBonusPoint());
@@ -65,9 +63,7 @@ class Buyer {
             System.out.printf("%s을/를 구입하셨습니다.\n", product);
             System.out.printf("bonusPoint %d 입니다.\n", bonusPoint);
     }
-
-
-    //    public void buy(Tv tv) {
+//         public void buy(Tv tv) {
 //        System.out.println("price : " + tv.getPrice());//get으로 Tv객체의 100을 읽어옴
 //    }
 //    public void buy(Computer computer){
@@ -81,11 +77,10 @@ class Buyer {
 }
 
 
-class Product {
+class Product {// Product는 오브젝트를 상속받음 임의로 적지 않아도 자동으로 extend Object가 있기 때문
     private int price;
     private int bonusPoint;
-
-    Product(int price) {
+    Product(int price) {//생성자가 이미 있기 때문에 기본생성자 자동으로 생성 X
         this.price = price;
         this.bonusPoint = price / 10;
 //        this.bonusPoint = (int)(price * 0.1);
@@ -125,7 +120,7 @@ class Tv extends Product {
 
 class Computer extends Product {
     public Computer() {
-        super(200);
+        super(200);//기본 생성자를 호출하든가 super로 기존에 있는 생성자 호출하여 사용하면 됨
     }
 
     @Override

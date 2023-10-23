@@ -59,9 +59,6 @@ class AnimalTest2{
         System.out.println(ani instanceof Cat);
         //Cat cat2 = (Cat)ani; 강제로 형변환해도 에러
 
-
-
-
         callCrying(dog);
         callCrying(cat);
         callCrying(bulldog);
@@ -71,7 +68,7 @@ class AnimalTest2{
     private static void callCrying(Animal ani){
         ani.crying();
         if(ani instanceof Bulldog){
-            Bulldog bulldog = (Bulldog) ani;
+            Bulldog bulldog = (Bulldog) ani;//불독타입을 사용하기 위해서 강제 형변환을 해야 함
             bulldog.jump();
 //            ((Bulldog) ani).jump();
         }
