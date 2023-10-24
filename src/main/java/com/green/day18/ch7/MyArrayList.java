@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class MyArrayList {
-    private int[] arr;
+    private int[] arr;//0개 짜리의 배열을 가리키고 있다가 add에서 i++로 배열 늘어남
 
     public MyArrayList() {
         arr = new int[0];
@@ -16,15 +16,13 @@ public class MyArrayList {
         for (int i = 0; i < arr.length; i++) {
             tmp[i] = arr[i];
         }
-        tmp[arr.length] = val;
+        tmp[arr.length] = val;//arr 0이기 때문에 for문이 실행되지 않고 0번 방의 10을 먼저 복사됨
         arr = tmp;
     }
 
     void add(int n, int n1) {
         int[] tmp = new int[arr.length + 1];
         tmp[n] = n1;
-//        for(int i=0; i<arr.length; i++){
-//            tmp[ i < n ? i : i + 1 ] = arr[i];
         for (int i = 0; i < n; i++) {
             tmp[i] = arr[i];
         }
@@ -33,6 +31,8 @@ public class MyArrayList {
         }
         arr = tmp;
     }
+//        for(int i=0; i<arr.length; i++){
+//            tmp[ i < n ? i : i + 1 ] = arr[i];
 
     @Override
     public String toString() {

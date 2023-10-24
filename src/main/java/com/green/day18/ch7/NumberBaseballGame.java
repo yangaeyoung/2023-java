@@ -20,7 +20,7 @@ class NumberBaseball {
     }
 
     public void start() {
-        setRandomNumNotDuplicate();//0~9 사이의 랜덤값 중복없이
+        setRandomNumNotDuplicate();//0~9 사이의 랜덤값 중복 없이
         getUserInput();
     }
     private void getUserInput(){

@@ -33,8 +33,8 @@ public class ArrayListTest {
 class ArrayListTest2{
     public static void main(String[] args) {
         int v1 = 10;
-        Integer v2 = 10;
-        List<Integer> list = new ArrayList();//<>기본형만 들어갈 수 있음
+        Integer v2 = 10;// 래퍼 타입
+        List<Integer> list = new ArrayList();//arrylist를 객체화 해서 정수형 객체값만 담겠단 뜻
         list.add(10);//값 넣을 때 add   boolean 타입
         list.add(20);//값 넣을 때 add   boolean 타입
         list.add(30);//값 넣을 때 add   boolean 타입
@@ -49,6 +49,7 @@ class ArrayListTest2{
         //[0]: 10
         //[1]: 20
         //[2]: 30
+        //[3]: 45
 
         for (int i=0; i< list.size(); i++){
             System.out.printf("[%d]: %d\n", i, list.get(i));
