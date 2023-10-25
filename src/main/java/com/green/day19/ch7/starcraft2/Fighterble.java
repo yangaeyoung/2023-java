@@ -16,7 +16,7 @@ class Unit{
     private int y;
 }
 
-class Fighter extends Unit implements Fighterble{
+class Fighter extends Unit implements Fighterble{//Fighter extends Unit // Fighter implements Fighterble
 
     @Override
     public void move(int x, int y) {

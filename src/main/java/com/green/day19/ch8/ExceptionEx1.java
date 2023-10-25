@@ -4,11 +4,11 @@ public class ExceptionEx1 {
     public static void main(String[] args) {
         int num = 0;
 //        num = num / 0;//에러 발생으로 실행 X
-        try {//예외가 발생 될 것 같음
+        try {//혹시나 예외가 발생된다면
             num = 10;
             num = num / 0;
         } catch (Exception e) {//예외 발생 됐을 때 실행
-            e.printStackTrace();//어떤 에러인지
+            e.printStackTrace();//어떤 에러인지 확인시
             System.out.println("예외 발생");
             num = -1;
         } finally {//없어도 됨 //반드시 실행 됨

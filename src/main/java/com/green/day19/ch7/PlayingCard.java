@@ -34,7 +34,7 @@ class Chess implements PlayingChess{
 }
 
 
-class Card implements PlayingCard{//abstract으로 오버라이딩 강제성 있음
+class Card implements PlayingCard{//abstract으로 오버라이딩 강제성 있음  구현부가 없는 부분울 구현하기 위해서
 
     @Override
     public String getCardNumber() {
