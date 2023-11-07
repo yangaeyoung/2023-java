@@ -55,4 +55,9 @@ public class BoardEntity {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    @Override
+    public String toString (){
+        return String.format("Iboard: %d, Title: %s, Write: %s, Ctnts: %s, CreatedAt: %s", getIboard(), getTitle(), getCtnts(), getWrite(),getCreatedAt());
+    }
 }
