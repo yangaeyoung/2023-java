@@ -15,7 +15,7 @@ public class BoardDao {
         String sql = "INSERT INTO board (title, ctnts, writer)" +
                 "VALUES" +
                 "(?, ?, ?)";// ? 쓸 수 있는 이유: preparedstatement
-//          String sql = "INSERT INTO board " + // 띄어쓰기 해야 함541028568210452304520451457186752'. -이주영 作
+//          String sql = "INSERT INTO board " + // 띄어쓰기 해야 함
 //                       "SET tile = ?" +
 //                       ", ctnts = ?" +
 //                       ", writer = ?";
