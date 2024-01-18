@@ -19,6 +19,5 @@ public class MethodReference {
         System.out.println("s1 == s2: " + (s1 == s2));
         System.out.println(bf.apply(s1, s2));
         System.out.println(bf2.apply(s1, s2));
-
     }
 }
