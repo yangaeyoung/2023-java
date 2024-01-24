@@ -90,14 +90,14 @@ public class BoardDao {
         List<BoardEntity> list = new ArrayList();// 파라미터 미지정: 모든 것을 쓰겠다는 뜻 //DB의 레코드를 한 줄씩 저장할 공간
         Connection con = null;
         PreparedStatement ps = null;
-        ResultSet rs = null;
+        ResultSet rs = null;// SELECT문의 결과를 저장하는 객체
         String sql = "SELECT iboard, title, writer, created_at " +
                 "FROM board";
         try {
             con = MyConn.getConn();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
-            while (rs.next()) {//레코드가 있는 수만큼 반복되고 false로 멈춤  if문은 한 줄만 // 레코드를 가리킴
+            while (rs.next()) {//레코드가 있는 수만큼 반복되고 false로 멈춤  if문은 한 줄만 // 여러 레코드를 가져와서 하나씩 뜯기
                 int iboard = rs.getInt("iboard");
                 String title = rs.getString("title");
                 String writer = rs.getString("writer");
