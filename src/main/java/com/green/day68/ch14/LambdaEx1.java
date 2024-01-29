@@ -8,7 +8,7 @@ interface MyFunction {
 public class LambdaEx1 {
     public static void main(String[] args) {
 
-        MyFunction mf0 = (i, i2) -> System.out.println("mf0 - run !!"); // 람다식: 메서드가 하나뿐이기 때문에 public void run() 안 적어줘도 됨
+        MyFunction mf0 = (i, i2) -> System.out.println("mf0 - run !!"); // 람다식: 메소드가 하나뿐이기 때문에 public void run() 안 적어줘도 됨
         // 파라미터가 하나라면 () 생략 가능 예) i ->, 이외에는 () 생략 불가
         // print문의 문장이 하나일 경우 {} 생략 가능, return문일 경우 {} 생략 불가
 
