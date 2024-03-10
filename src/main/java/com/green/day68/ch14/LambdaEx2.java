@@ -7,7 +7,7 @@ interface MyFunction2 {
 
 public class LambdaEx2 {
     public static void main(String[] args) {
-        MyFunction2 mf = () -> System.out.println("안녕하세요.");
+        MyFunction2 mf = () -> System.out.println("안녕하세요."); // 오버라이딩
         mf.myMethod();
     }
 }
