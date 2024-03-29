@@ -16,7 +16,7 @@ public class ArrayRandomMission {
 
         for (int i=0; i<arr.length; i++) {
             arr[i] = (int) (Math.random() * 5) + 1;
-            System.out.println(arr[i]);//중복제거되고 랜덤으로 나오는 과정 보기
+            System.out.println(arr[i]);//랜덤으로 나오는 과정 보기
 
             for (int z=0; z<i; z++) {
                 if (arr[i] == arr[z]) {

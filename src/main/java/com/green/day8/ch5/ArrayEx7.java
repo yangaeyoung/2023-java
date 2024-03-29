@@ -16,7 +16,7 @@ public class ArrayEx7 {
 
         for (int i = 0; i < arr.length; i++) {
             int rIdx = (int) (Math.random() * arr.length); //0~9
-            int tmp = arr[i];
+            int tmp = arr[i]; //0-9 담기
             arr[i] = arr[rIdx];
             arr[rIdx] = tmp;
         }
